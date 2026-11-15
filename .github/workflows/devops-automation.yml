@@ -1,0 +1,29 @@
+name: Validacion DevOps
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+      - name: Validar estructura obligatoria
+        run: |
+          test -f src/index.html
+          test -f src/styles.css
+          test -f Dockerfile
+          test -f docker-compose.yml
+          test -f .gitignore
+          test -f .env.example
+          test -f README.md
+      - name: Validar contenido básico
+        run: |
+          grep -qi '<html' src/index.html
+          grep -qi 'nginx:alpine' Dockerfile
+          grep -q '8080' README.md
+          echo "Validación completada correctamente."

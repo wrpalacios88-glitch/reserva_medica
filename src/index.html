@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demostración local de reserva de horas médicas">
+  <title>Centro Médico C.A.S | Reserva de horas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="brand"><span class="brand-mark">+</span><div><strong>C.A.S</strong><small>Centro Médico</small></div></div>
+      <span class="service-status"><i></i> Servicio disponible</span>
+    </div>
+  </header>
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">ATENCIÓN DE SALUD</p>
+      <h1>Reserva tu hora médica</h1>
+      <p>Completa el formulario de demostración para seleccionar una atención.</p>
+    </section>
+    <section class="layout">
+      <form class="booking-card" action="#" method="get">
+        <h2>Datos de la reserva</h2>
+        <p class="muted">Los datos ingresados no se envían ni se almacenan. Sitio demostrativo.</p>
+        <label for="nombre">Nombre del paciente</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Ej.: Juan Pérez" autocomplete="off" required>
+        <label for="rut">Rut Del Paciente</label>
+        <input id="rut" name="rut" type="text" placeholder="Ej.: 12.345.678-9" autocomplete="off" required>
+        <div class="two-columns">
+          <div><label for="especialidad">Especialidad</label>
+            <select id="especialidad" name="especialidad" required>
+              <option value="">Seleccionar</option><option>Medicina general</option><option>Cardiología</option><option>Pediatría</option><option>Traumatología</option><option>Dermatología</option>
+            </select>
+          </div>
+          <div><label for="profesional">Profesional</label>
+            <select id="profesional" name="profesional" required>
+              <option value="">Seleccionar</option><option>Dra. Carolin Valderrama</option><option>Dr. Sebastian Palacios</option><option>Dra. Antonella Palacios</option><option>Dra. Dayane Pizarro</option>
+            </select>
+          </div>
+        </div>
+        <div class="two-columns">
+          <div><label for="fecha">Fecha preferida</label><input id="fecha" name="fecha" type="date" required></div>
+          <div><label for="hora">Horario</label><select id="hora" name="hora" required><option value="">Seleccionar</option><option>09:00</option><option>10:30</option><option>12:00</option><option>15:00</option><option>16:30</option></select></div>
+        </div>
+        <label for="correo">Correo de contacto (opcional)</label>
+        <input id="correo" name="correo" type="email" placeholder="correo@ejemplo.cl" autocomplete="off">
+        <button type="submit">Revisar solicitud</button>
+        <p class="privacy">Privacidad: no ingreses información médica real ni datos personales sensibles.</p>
+      </form>
+      <aside class="info-card">
+        <h2>Información de atención</h2>
+        <div class="info-item"><span class="info-icon">◷</span><div><strong>Horario</strong><p>Lunes a viernes, 08:30 a 18:00</p></div></div>
+        <div class="info-item"><span class="info-icon">⌖</span><div><strong>Modalidad</strong><p>Atención presencial</p></div></div>
+        <div class="info-item"><span class="info-icon">✓</span><div><strong>Estado del sistema</strong><p>Interfaz web disponible en entorno local.</p></div></div>
+        <div class="notice"><strong>Entorno de demostración</strong><p>Esta aplicación es estática. No confirma citas, no utiliza API ni base de datos.</p></div>
+      </aside>
+    </section>
+  </main>
+  <footer><div class="container">© 2026 Centro Médico C.A.S </div></footer>
+</body>
+</html>
